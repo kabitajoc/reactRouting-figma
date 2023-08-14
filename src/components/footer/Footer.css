@@ -1,0 +1,122 @@
+.footer {
+  /* display: flex;
+    flex-direction: column;
+    gap:100px; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  width: 100%;
+  /* max-width: 1680px; */
+  max-height: 500px;
+  flex-shrink: 0;
+  background: #000;
+  color: #fff;
+  /* margin: auto; */
+}
+.foot-nav li {
+  color: #fff;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 28px; /* 140% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.foot-nav li span {
+  color: #fff;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 140% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.flex svg {
+  /* fill: #fff; */
+  display: grid;
+
+  max-width: 290.915px;
+
+  height: 27.296px;
+  /* flex-shrink: 0; */
+
+  /* margin-left: 35rem; */
+}
+.foot-nav li {
+  list-style: none;
+  margin-bottom: 100px;
+}
+.foot-nav ul {
+  display: flex;
+  /* gap: 18px; */
+  justify-content: space-around;
+}
+.social-links a {
+  color: #fff;
+  font-family: Inter Text;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 170%; /* 27.2px */
+  /* text-decoration-line: underline; */
+}
+.social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.flex p {
+  max-width: 488px;
+  height: 71px;
+  flex-shrink: 0;
+  color: #fff;
+  text-align: center;
+  font-family: Newsreader;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+  margin: auto;
+}
+.copyright p {
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 16.8px */
+}
+.flex {
+  /* margin-top: 50px; */
+  /* margin: auto; */
+  display: grid;
+  justify-items: center;
+  /* flex-direction: column; */
+  gap: 40px;
+}
+@media (max-width: 1060px) {
+  .foot-nav li span {
+    display: none;
+  }
+}
+@media (max-width: 580px) {
+  .foot-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+
+    max-width: 580px;
+  }
+  .foot-nav ul li {
+    margin: 20px auto;
+
+    font-family: Inter;
+    font-size: 15px;
+
+    font-weight: 600;
+  }
+}

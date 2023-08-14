@@ -1,0 +1,13 @@
+.hamburger-byside {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  margin: auto;
+}
+/* @media(max-width:912){
+.hamburger-byside
+{
+  display:flex;
+
+}
+} */
