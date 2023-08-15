@@ -1,12 +1,13 @@
 import React from "react";
 import "./Nav.css";
+import logo from "../../assets/Images/NordicLogo.png";
 import { Link } from "react-router-dom";
 
 function Nav() {
   return (
     <div className="navbar">
       <div className="logo">
-        <img src="Images/NordicLogo.png" />
+        <img src={logo} />
       </div>
       <div className="nav-links">
         <ul>
@@ -15,18 +16,12 @@ function Nav() {
           </li>
           <li>
             <a> About</a>
-
-            {/* </Link> */}
           </li>
           <li>
-            {/* <Link to="/links"> */}
-            Links
-            {/* </Link> */}
+            <a>Links</a>
           </li>
           <li>
-            {/* <Link to="/projects"> */}
-            Projects
-            {/* </Link> */}
+            <a>Projects</a>
           </li>
         </ul>
       </div>

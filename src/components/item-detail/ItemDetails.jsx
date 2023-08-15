@@ -1,6 +1,6 @@
 import React from "react";
-import Datas from "../data/Datas";
-import Nav from "../nav/Nav";
+import "./ItemDetails.css";
+
 import { useParams } from "react-router-dom";
 import { blogsData } from "../data/blogs-data";
 
@@ -14,14 +14,14 @@ function ItemDetails() {
   }
   return (
     <div>
-      <Nav />
+      {/* <Nav /> */}
       {/* <Datas /> */}
       {/* <img src={item.image} alt={`Article ${item.id}`} />
                   <p>{item.title}</p> */}
-      <h1>Detail is given here</h1>
+      {/* <h1>Detail is given here</h1> */}
       <div className="item-product">
-        <h2>{filteredItem[0].title}</h2>
         <img src={filteredItem[0].image} />
+        <h2>{filteredItem[0].title}</h2>
       </div>
     </div>
   );

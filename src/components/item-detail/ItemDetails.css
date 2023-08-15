@@ -1,0 +1,16 @@
+.item-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 30px auto;
+  /* margin-top: 20px; */
+}
+.item-product img {
+  height: 400px;
+  width: 400px;
+}
+.item-product h2 {
+  font-size: 42px;
+}
