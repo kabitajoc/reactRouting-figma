@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: grey;
+  /* gap: 30px; */
+}
+button {
+  margin-top: 20px;
+  /* width: 100%; */
+  width: 600px;
+  height: 30px;
+  background: rgb(135, 162, 235);
+  text-decoration: none;
+  text-align: center;
+}
+input {
+  width: 600px;
+  height: 30px;
+}
+.error {
+  color: red;
+}
