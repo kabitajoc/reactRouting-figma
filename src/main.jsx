@@ -1,15 +1,45 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
+
 import "./index.css";
-// import { BrowserRouter } from "react-router-dom";
-import { Provider } from "react-redux";
-// import { storeConfigure } from "./redux-login/store";
-// import { configureStore } from "@reduxjs/toolkit";
-import store from "./redux-login/store.jsx";
+
+import {
+  NavLink,
+  Route,
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+} from "react-router-dom";
+import Home from "./components/home/home.jsx";
+import About from "./components/about/About.jsx";
+import Projects from "./components/projects/Projects.jsx";
+import Login from "./components/login/Login.jsx";
+import Datas from "./components/data/Datas.jsx";
+import App from "./App";
+import ProtectedRoutes from "./components/ProtectedRoutes";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<App />}>
+      <Route path="" element={<Home />} />
+      <Route path="about" element={
+      <ProtectedRoutes><About /></ProtectedRoutes>
+      } />
+      <Route path="blog" element={
+      <ProtectedRoutes><Datas /></ProtectedRoutes>
+      } />
+      <Route path="navlinks" element={
+      <ProtectedRoutes> <NavLink /></ProtectedRoutes>
+     } />
+      <Route path="projects" element={
+      <ProtectedRoutes><Projects /></ProtectedRoutes>} />
+      <Route path="login" element={<Login />} />
+    </Route>
+  )
+);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <Provider store={store}>
-    <App />
-  </Provider>
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
 );

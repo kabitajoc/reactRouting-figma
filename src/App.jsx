@@ -1,22 +1,27 @@
-import { useState } from "react";
-
-import "./App.css";
-import HomePage from "./pages/HomePage";
+import React, { useState, useEffect } from "react";
+import { Navigate, Outlet, Route, Routes } from "react-router-dom";
+import Nav from "./components/nav/Nav";
+import Footer from "./components/footer/Footer";
 import Login from "./components/login/Login";
-import { useSelector } from "react-redux";
-import { selectUser } from "./redux-login/userSlice";
 
 function App() {
-  // const [count, setCount] = useState(0);
-  const user = useSelector(selectUser);
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  // useEffect(() => {
+  //   const storedEmail = localStorage.getItem("email");
+  //   const storedPassword = localStorage.getItem("password");
+  //   if (storedEmail === "john@gmail.com" && storedPassword === "changeme") {
+  //     setIsLoggedIn(true);
+  //   }
+  // }, []);
+  // if (setIsLoggedIn(true)) {
+  //   Navigate("/home");
+  // }
   return (
     <>
-      <div>
-        {/* <Login /> */}
-        {/* <HomePage /> */}
-        {user ? <HomePage /> : <Login />}
-      </div>
+      <Nav />
+      <Outlet />
+      <Footer />
     </>
   );
 }

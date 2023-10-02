@@ -90,8 +90,7 @@ function Footer() {
             </p>
           </div>
         </div>
-      </div>
-  );
+      </div>  );
 }
 
 export default Footer;

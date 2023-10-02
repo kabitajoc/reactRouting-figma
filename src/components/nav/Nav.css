@@ -22,7 +22,7 @@
 }
 .nav-links ul {
   display: flex;
-  gap: 30px;
+  /* gap: 30px; */
   /* justify-content: space-around; */
   /* flex-direction: row; */
 }
@@ -41,6 +41,15 @@
 }
 li .blog-list {
   border-bottom: #000;
+}
+
+button  {
+  /* text-white bg-slate-700 hover:bg-slate-800 focus:ring-4 focus:ring-slate-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none */
+
+  color: white;
+  background-color: rgb(42, 40, 40);
+  padding: 2px;
+  width: 20px;
 }
 
 @media (max-width: 1365px) {
