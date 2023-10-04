@@ -20,20 +20,43 @@ import ProtectedRoutes from "./components/ProtectedRoutes";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<App />}>
+    <Route path="/" element={<App />}>  
       <Route path="" element={<Home />} />
-      <Route path="about" element={
-      <ProtectedRoutes><About /></ProtectedRoutes>
-      } />
-      <Route path="blog" element={
-      <ProtectedRoutes><Datas /></ProtectedRoutes>
-      } />
-      <Route path="navlinks" element={
-      <ProtectedRoutes> <NavLink /></ProtectedRoutes>
-     } />
-      <Route path="projects" element={
-      <ProtectedRoutes><Projects /></ProtectedRoutes>} />
       <Route path="login" element={<Login />} />
+      <Route
+        path="about"
+        element={
+          <ProtectedRoutes>
+            <About />
+          </ProtectedRoutes>
+        }
+      />
+      <Route
+        path="blog"
+        element={
+          <ProtectedRoutes>
+            <Datas />
+          </ProtectedRoutes>
+        }
+      />
+      <Route
+        path="navlinks"
+        element={
+          <ProtectedRoutes>
+            {" "}
+            <NavLink />
+          </ProtectedRoutes>
+        }
+      />
+      <Route
+        path="projects"
+        element={
+          <ProtectedRoutes>
+            <Projects />
+          </ProtectedRoutes>
+        }
+      />
+     
     </Route>
   )
 );

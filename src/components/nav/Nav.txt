@@ -1,0 +1,52 @@
+import React from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import logo from "../../assets/Images/NordicLogo.png";
+import Login from "../login/Login";
+import { useEffect } from "react";
+
+function Nav() {
+  const navigate = useNavigate();
+  const isLoggedIn =
+    localStorage.getItem("email") && localStorage.getItem("password");
+
+  const handleLogout = () => {
+    localStorage.removeItem("email");
+    localStorage.removeItem("password");
+    navigate("/login");
+  };
+
+  return (
+    <div className="bg-slate-300  text-black">
+      <div className="flex items-center flex-row px-4 py-2">
+        <div className="flex items-center">
+          <img src={logo} className=" w-28   h-auto" alt="Logo" />
+        </div>
+        <div className="space-x-4">
+          <NavLink to="/" className="ml-4 text-lg font-semibold">
+            Home
+          </NavLink>
+
+          {isLoggedIn && (
+            <>
+              <NavLink to="/blog" className="blog-list">
+                Blog
+              </NavLink>
+              <NavLink to="/about">About</NavLink>
+              <NavLink to="/NavLinks">NavLinks</NavLink>
+              <NavLink to="/projects">Projects</NavLink>
+              <button
+                onClick={handleLogout}
+                className="w-20 rounded-md bg-slate-800 text-white"
+              >
+                Logout
+              </button>
+            </>
+          )}
+          <NavLink to="/login">Login</NavLink>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Nav;
