@@ -27,8 +27,8 @@ function Nav() {
   const logoWidthClass = isMediumOrSmallScreen ? "w-32" : "w-40";
 
   return (
-    <div className="bg-slate-300 relative text-black px-4 py-2 gap-20  text-center items-center">
-      <div className=" inline-block absolute left-3 top-7 ">
+    <div className="bg-slate-300 relative text-black px-4 py-2 gap-24 text-center items-center">
+      <div className=" inline-block absolute left-3 top-7  ">
         {isMediumOrSmallScreen && (
           <HamburgerMenu /> // Render HamburgerMenu on small screens
         )}

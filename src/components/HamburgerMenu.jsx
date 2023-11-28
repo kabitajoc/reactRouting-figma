@@ -26,7 +26,7 @@ function HamburgerMenu() {
         </svg>
       </div>
       {menuOpen && (
-        <div className="menu-links flex flex-col items-center  w-56  absolute top-8 left-0 h-screen bg-slate-500  text-white font-bold  p-4 ">
+        <div className="menu-links flex flex-col items-center  w-56  absolute top-5  left-0 h-screen bg-slate-500  text-white font-bold  p-4 ">
           <NavLink
             to="/"
             className="text-white hover:text-gray-400"
