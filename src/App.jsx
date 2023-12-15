@@ -7,16 +7,12 @@ import Login from "./components/login/Login";
 function App() {
   // const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-
   return (
-    <div >
-      <Nav 
-      // isLoggedIn={isLoggedIn}
-       />
+    <div>
+      <Nav />
       <Outlet />
-      {/* {isLoggedIn &&  */}
+
       <Footer />
-      {/* } */}
     </div>
   );
 }
