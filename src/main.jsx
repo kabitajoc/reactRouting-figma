@@ -10,19 +10,22 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-import Home from "./components/home/home.jsx";
+
 import About from "./components/about/About.jsx";
 import Projects from "./components/projects/Projects.jsx";
 import Login from "./components/login/Login.jsx";
 import Datas from "./components/data/Datas.jsx";
 import App from "./App";
 import ProtectedRoutes from "./components/ProtectedRoutes";
+import HeroSection from "./components/hero/HeroSection.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<App />}>  
-      <Route path="" element={<Home />} />
+  
+    <Route path="/" element={<App />}>
+      <Route path="/" element={<HeroSection/>} />
       <Route path="login" element={<Login />} />
+      
       <Route
         path="about"
         element={
@@ -56,7 +59,6 @@ const router = createBrowserRouter(
           </ProtectedRoutes>
         }
       />
-     
     </Route>
   )
 );
